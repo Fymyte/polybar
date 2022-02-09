@@ -8,54 +8,46 @@
  */
 
 configuration {
-	font:							"Pango DejaVu Sans Mono 12";
+  font:             "Pango DejaVu Sans Mono 12";
     show-icons:                     true;
-	icon-theme: 					"Papirus";
-    display-drun: 					"";
+  icon-theme:           "Papirus";
+    display-drun:           "";
     drun-display-format:            "{name}";
     disable-history:                false;
     fullscreen:                     false;
-	hide-scrollbar: 				true;
-	sidebar-mode: 					false;
+  hide-scrollbar:         true;
+  sidebar-mode:           false;
 }
 
-* {
-  al:   #00000000;
-  bg:   #282828FF;
-  bga:  #313131FF;
-  fg:   #EBDBB2FF;
-  ac:   #FB4934FF;
-  se:   #8EC07CFF;
-}
-//@import "colors.rasi"
+@import "colors.rasi"
 
 window {
     transparency:                   "real";
     background-color:               @bg;
     text-color:                     @fg;
-	border:							0px 0px 0px 0px;
-	border-color:					@ac;
+  border:             0px 0px 0px 0px;
+  border-color:         @ac;
     border-radius:                  0px;
-	width:							350px;
+  width:              350px;
     location:                       center;
     x-offset:                       0;
     y-offset:                       0;
 }
 
 prompt {
-    enabled: 						true;
-	padding: 						0px 0px 0px 5px;
-	background-color: 				@bga;
-	text-color: 					@fg;
+    enabled:            true;
+  padding:            0px 0px 0px 5px;
+  background-color:         @bga;
+  text-color:           @fg;
 }
 
 textbox-prompt-colon {
-	padding: 						0px;
-	background-color: 				@bga;
-	text-color: 					@ac;
-	expand: false;
-	str: "";
-	font:							"feather 12";
+  padding:            0px;
+  background-color:         @bga;
+  text-color:           @ac;
+  expand: false;
+  str: "";
+  font:             "feather 12";
 }
 
 entry {
@@ -65,20 +57,21 @@ entry {
     expand:                         true;
     horizontal-align:               0;
     placeholder:                    "Search...";
-	padding: 						0px 0px 0px 10px;
+  padding:            0px 0px 0px 10px;
     blink:                          true;
 }
 
 inputbar {
-	children: 						[ textbox-prompt-colon, entry ];
+  children:             [ textbox-prompt-colon, entry ];
     background-color:               @bga;
     text-color:                     @fg;
     expand:                         false;
-	border:							0px 0px 1px 0px;
+  border:             0px 0px 1px 0px;
     border-radius:                  0px;
-	border-color:					@se;
+  border-color:         @se;
     margin:                         0px;
     padding:                        10px;
+  border-radius:          10px 10px 0px 0px;
 }
 
 listview {
@@ -90,15 +83,16 @@ listview {
     cycle:                          true;
     dynamic:                        true;
     layout:                         vertical;
+    border-radius:          0px 0px 10px 10px;
 }
 
 mainbox {
     background-color:               @al;
-	border:							0px;
+  border:             0px;
     border-radius:                  0px;
-	border-color:					@ac;
+  border-color:         @ac;
     children:                       [ inputbar, listview ];
-    spacing:                       	5px;
+    spacing:                        5px;
     padding:                        5px;
 }
 
@@ -107,7 +101,7 @@ element {
     text-color:                     @fg;
     orientation:                    horizontal;
     border-radius:                  0px;
-	padding: 						8px 8px 8px -20px;
+  padding:            8px 8px 8px -20px;
 }
 
 element-icon {
@@ -129,7 +123,7 @@ element-text {
 element selected {
     background-color:               @se;
     text-color:                     @bg;
-	border:							0px 0px 0px 0px;
+  border:             0px 0px 0px 0px;
     border-radius:                  0px;
-    border-color:                  	@ac;
+    border-color:                   @ac;
 }
